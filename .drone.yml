@@ -13,7 +13,7 @@ pipeline:
 
   deploy-heroku:
     image: fbcbarbosa/heroku
-    app: hello
+    app: hello-tdc
     login: fbcbarbosa@gmail.com
     secrets: [ plugin_token ]
     when:
