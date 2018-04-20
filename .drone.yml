@@ -1,6 +1,6 @@
 services:
   redis:
-    image: redis
+    image: redis:latest
 
 pipeline:
 
