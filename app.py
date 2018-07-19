@@ -3,7 +3,7 @@ import redis
 import os
 import socket
 
-MESSAGE="World"
+MESSAGE="TDC 2018"
 
 # Connect to Redis
 r = redis.from_url(os.getenv("REDIS_URL", "redis://redis"), db=0, socket_connect_timeout=2, socket_timeout=2)
