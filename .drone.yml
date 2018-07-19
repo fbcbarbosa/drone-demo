@@ -9,7 +9,7 @@ pipeline:
     commands:
       - pip install -r requirements.txt
       - pip install pytest
-      - pytest tests.py -s
+    # - pytest tests.py -s
 
   deploy-heroku:
     image: fbcbarbosa/heroku
