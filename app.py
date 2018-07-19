@@ -3,6 +3,8 @@ import redis
 import os
 import socket
 
+MESSAGE="World"
+
 # Connect to Redis
 r = redis.from_url(os.getenv("REDIS_URL", "redis://redis"), db=0, socket_connect_timeout=2, socket_timeout=2)
 
@@ -16,7 +18,7 @@ def hello():
         visits = "<i>cannot connect to Redis, counter disabled</i>"
 
     html = "<h3>Hello {name}!</h3>"            "<b>Hostname:</b> {hostname}<br/>"            "<b>Visits:</b> {visits}"
-    return html.format(name=os.getenv("NAME", "world"), hostname=socket.gethostname(), visits=visits)
+    return html.format(name=MESSAGE, hostname=socket.gethostname(), visits=visits)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=int(os.getenv("PORT", "4000")))
